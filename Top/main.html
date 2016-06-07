@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>R i M o</title>
+
+        <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/jquery.yycountdown.css">
+
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+	<div class="container">
+		<div id="timer"></div>
+		<h1>Coming soon...</h1>
+		<h2>- Present By RiMo Group -</h2>
+		<form class="form">
+			<br><br><br>
+			<input type="button" onclick="location.href='http://localhost/Rimo/Register/register.html'"value="Register">
+			<input type="button" onclick="location.href='http://localhost/Rimo/Login/login.html'"value="Login">
+		</form>
+	</div>
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+</div>
+
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.yycountdown.js"></script>
+
+
+		<script type="text/javascript">
+		$('#timer').yycountdown({
+		  startDateTime : '2016/06/07 12:00:00',  //カウントダウン開始日時
+		  endDateTime   : '2016/09/25 00:00:00',  //カウントダウン終了日時
+		  unit          : {d: 'Days', h: ':', m: ':', s: ''},  //カウントダウン単位
+		  complete      : function(_this){  //カウントダウン完了時のコールバック
+		                    _this.find('.yycountdown-box').css({color:'red'});
+		                  }
+		});
+		</script>
+
+
+  </body>
+</html>
