@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rimo</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+        .u-mb20 {
+            margin-bottom: 20px;
+        }
+        .gbl-nav {
+            background-color: #444444;
+        }
+        .sub-title {
+            font-size: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <nav class="gbl-nav u-mb20">
+
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Rimo</a>
+
+<!--ここから
+        <ul class="right hide-on-med-and-down">
+
+          <li>
+            <a href="#!">家の電気</a>
+          </li>
+
+          <li>
+            <a href="#!">LEDランプ</a>
+          </li>
+
+        </ul>
+
+        <ul id="slide-out" class="side-nav">
+
+          <li>
+            <a href="#!">家の電気</a>
+          </li>
+
+          <li>
+            <a href="#!">LEDランプ</a>
+          </li>
+
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse">
+          <i class="mdi-navigation-menu"></i>
+        </a>
+ここまでいらぬ-->
+      </div>
+
+    </nav>
+
+    <div class="container">
+
+      <div class="sub-title u-mb20">家の電気の設定</div>
+
+      <div class="u-mb20">
+
+        <h6>
+          <i class="fa fa-power-off"></i>現在の【家の電気】の状態は
+        </h6>
+
+        <span class="js-state-output">
+          <div class="progress">
+            <div class="indeterminate"></div>
+          </div>
+        </span>
+
+      </div>
+
+      <div class="row u-mb20">
+
+        <div class="col s6">
+          <a class="waves-effect waves-light btn-large js-aircon-on">電源ON</a>
+        </div>
+
+        <div class="col s6">
+          <a class="waves-effect waves-light btn-large js-aircon-off">電源OFF</a
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+
+    <script>
+        $('.button-collapse').sideNav();
+
+        var myFirebaseRef = new Firebase("https://rimo-9657d.firebaseio.com/");
+
+        myFirebaseRef.child("power").on("value", function(snapshot) {
+
+            var state;
+            if (snapshot.val()) {
+                state = "<h5 class='center'><i class='fa fa-play-circle-o'></i>電源はONです</h5>";
+                $('.js-aircon-on').addClass('disabled');
+                $('.js-aircon-off').removeClass('disabled');
+            } else {
+                state = "<h5 class='center'><i class='fa fa-stop-circle-o'></i>電源はOFFです</h5>";
+                $('.js-aircon-off').addClass('disabled');
+                $('.js-aircon-on').removeClass('disabled');
+            }
+
+            $('.js-state-output').html(state)
+        });
+
+        $('.js-aircon-on').click(function() {
+            myFirebaseRef.set({
+                power: true
+            });
+        });
+        $('.js-aircon-off').click(function() {
+            myFirebaseRef.set({
+                power: false
+            });
+        });
+    </script>
+
+
+  </body>
+</html>

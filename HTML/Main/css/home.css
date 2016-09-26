@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h2{
+	font-size:30px;
+	margin:0px;
+}
+/*へッダー--------------------------------*/
+.header{
+	width:100%;
+	height:100px;
+	border:2px solid #FFFFFF;
+	background: #FFFFFF;
+	text-align:center;
+}
+
+.ico{
+	float:left;
+	width:100px;
+	height:90px;
+	border:2px solid #FFFFFF;
+	margin:0 auto;
+	background: #FFFFFF;
+	
+}
+
+.menu{
+	width:900px;
+	height:90px;
+	border-bottom:solid #000000;
+	background: #FFFFFF;
+	margin:0 auto;
+	}
+.menu li{
+	list-style-type:none;
+	width:64px;
+	height:64px;
+	float:left;
+	}
+
+li a{
+	border-color:#000000;
+	display:inline;
+	padding:3px;
+	margin:0;
+	}
+	
+li.deta{
+	background:url(../icom/en.jpg);
+}
+li.rimo{
+	background:url(../icom/%E3%83%AA%E3%83%A2%E3%82%B3%E3%83%B3.jpg)
+}
+li.aca{
+	background:url(../icom/icon_001461_48.jpg);
+}
+
+
+/*外枠-----------------------------------*/
+.main{
+	clear:both;
+	width: 820px;
+	height:730px;
+	background: #FFFFFF;
+	text-align:center;
+}
+
+/*中枠　上部------------------------------*/
+.articleh{
+	width:760px;
+	height:310px;
+	margin:20px auto;
+	background: #FFFFFF;
+	text-align:center;
+}
+
+/*円　枠---------------------------------*/
+.circle{
+	display:inherit;
+	float:left;
+	width:300px;
+	height:300px;
+	margin:0px 0px 0px 20px;
+	border:2px solid #DDDDDD;
+	background: #FFFFFF;
+	text-align:center;
+}
+
+/*データ枠-------------------------------*/
+.data{
+	display:inherit;
+	float:left;
+	width:400px;
+	height:300px;
+	margin:0px 0px 0px 15px;
+	border:2px solid #DDDDDD;
+	background: #FFFFFF;
+	text-align:center;
+}
+
+/*家電ごとのデータ-----------------------*/
+.line{
+	border-collapse: collapse;
+	border-spacing:2px;
+     width: 150px;
+     font-size: 12px;
+     text-align: left;
+	}
+	
+.line th{
+	width:70px;
+	color: #000000;
+    background-color: #FFFFFF;
+    font-weight: bold;
+    border-bottom: 1px solid #CCC;	
+}
+
+.line td{
+	ext-align: right;
+    padding: 12px;
+    color: #666;
+    border-bottom: 1px solid #CCC;	
+}
+
+.line img{
+	width:20px;
+	height:20px;
+
+}
+
+/*枠　下部-------------------------------*/
+.articlef{
+    clear:both;
+	width:760px;
+	height:350px;
+	text-align:center;
+	margin: 20px auto;
+	background: #FFFFFF;
+	text-align:center;
+	}
+
+/*下部　月日枠----------------------------*/
+.section{
+	width:750px;
+	height:300px;
+	margin:20px auto;
+	border:2px solid #DDDDDD;
+	background: #FFFFFF;
+}
+
+
+
+
+
+
+/*Jquery CSS-------------------------------------------------------------------*/
+
+
+
+/*月TAB*/
+#tabs{overflow:hidden; margin: 15px auto 0;width: 560px;}
+#tabs ul{overflow:hidden; list-style:none; margin: 0;}
+#tabs li{background:#ddd; float:right; margin-right:5px; cursor:pointer;}
+#tabs li a{color: #373737; font-weight: bold; text-decoration: none;}
+#tabs .panel{background:#FFFFFF; padding:10px; height:210px; display:none; overflow: hidden;}
+/**//**//**//**//**//**//**/
+
+	

@@ -40,7 +40,9 @@ CREATE TABLE IF NOT EXISTS `bplz01` (
 --
 
 INSERT INTO `bplz01` (`no`, `name`, `id`, `pass`) VALUES
-(1, 'test', 'test', '098f6bcd4621d373cade4e832627b4f6');
+(1, 'test', 'test', '098f6bcd4621d373cade4e832627b4f6'),
+(2, '森田', 'morita', '9af7a6e198c1ac76f4941288fb1a11f2'),
+(3, 'TEST', 'tunagohan', '025229822daa960514d8e09059d16a9d');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
