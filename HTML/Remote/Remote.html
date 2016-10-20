@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <title>Rimo</title>
@@ -17,7 +17,6 @@
             font-size: 20px;
             border-bottom: 1px solid #ccc;
         }
-
     </style>
   </head>
   <body>
@@ -29,27 +28,20 @@
 
 <!--ここから
         <ul class="right hide-on-med-and-down">
-
           <li>
             <a href="#!">家の電気</a>
           </li>
-
           <li>
             <a href="#!">LEDランプ</a>
           </li>
-
         </ul>
-
         <ul id="slide-out" class="side-nav">
-
           <li>
             <a href="#!">家の電気</a>
           </li>
-
           <li>
             <a href="#!">LEDランプ</a>
           </li>
-
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse">
           <i class="mdi-navigation-menu"></i>
@@ -84,8 +76,33 @@
         </div>
 
         <div class="col s6">
-          <a class="waves-effect waves-light btn-large js-aircon-off">電源OFF</a
+          <a class="waves-effect waves-light btn-large js-aircon-off">電源OFF</a>
         </div>
+
+          <div class="col s6">
+              <a class="waves-effect waves-light btn-large js-Red-on">赤</a>
+          </div>
+
+
+          <div class="col s6">
+              <a class="waves-effect waves-light btn-large js-Green-on">緑</a>
+          </div>
+
+
+          <div class="col s6">
+              <a class="waves-effect waves-light btn-large js-Blue-on">青</a>
+          </div>
+
+
+          <div class="col s6">
+              <a class="waves-effect waves-light btn-large js-Orange-on">黄</a>
+          </div>
+
+
+          <div class="col s6">
+              <a class="waves-effect waves-light btn-large js-White-on">白</a>
+          </div>
+
 
       </div>
 
@@ -98,35 +115,49 @@
 
     <script>
         $('.button-collapse').sideNav();
-
-        var myFirebaseRef = new Firebase("https://rimo-9657d.firebaseio.com/");
-
-        myFirebaseRef.child("power").on("value", function(snapshot) {
-
-            var state;
-            if (snapshot.val()) {
-                state = "<h5 class='center'><i class='fa fa-play-circle-o'></i>電源はONです</h5>";
-                $('.js-aircon-on').addClass('disabled');
-                $('.js-aircon-off').removeClass('disabled');
-            } else {
-                state = "<h5 class='center'><i class='fa fa-stop-circle-o'></i>電源はOFFです</h5>";
-                $('.js-aircon-off').addClass('disabled');
-                $('.js-aircon-on').removeClass('disabled');
-            }
-
-            $('.js-state-output').html(state)
-        });
-
+        var myFirebaseRef = new Firebase("https://rimo-8666d.firebaseio.com/");
+        myFirebaseRef.child("power").on("value", function(snapshot) { });
+        myFirebaseRef.child("color").on("value", function(color) { });
+//Power Status
         $('.js-aircon-on').click(function() {
             myFirebaseRef.set({
-                power: true
+                power: "ON"
             });
         });
         $('.js-aircon-off').click(function() {
             myFirebaseRef.set({
-                power: false
+                power: "OFF"
             });
         });
+        //Power Status color
+        $('.js-Red-on').click(function() {
+            myFirebaseRef.set({
+                color: "Red"
+            });
+        });
+        $('.js-Green-on').click(function () {
+            myFirebaseRef.set({
+                color: "Green"
+            });
+        });
+        $('.js-Blue-on').click(function () {
+            myFirebaseRef.set({
+                color: "Blue"
+            });
+        });
+        $('.js-Orange-on').click(function () {
+            myFirebaseRef.set({
+                color: "Orange"
+            });
+        });
+        $('.js-White-on').click(function () {
+            myFirebaseRef.set({
+                color: "White"
+            });
+        });
+
+
+        
     </script>
 
 

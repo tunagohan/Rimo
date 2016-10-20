@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+    <title>Register</title>
+
+	<link rel="stylesheet" href="../lib/css/validationEngine.jquery.css">
+    <link rel="stylesheet" href="../lib/css/Register_style.css">
+	<link rel="shortcut icon" href="../favicon.ico">
+
+	<script src="../lib/js/jquery-1.8.2.min.js" type="text/javascript"charset="UTF-8"></script>
+	<script src="../lib/js/jquery.validationEngine-ja.js" type="text/javascript" charset="utf-8" ></script>
+	<script src="../lib/js/jquery.validationEngine.js" type="text/javascript"charset="UTF-8"></script>
+
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery("#form").validationEngine();
+		});
+		</script>
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+	<div class="container">
+		Home appliance control
+		<h1>R i M o</h1>
+		
+		<form id="form" class="form" name="" post="" action="check.php" method="POST">
+
+			<!---　中に名前を入れる場合placeholder="Username" --->
+			<label>User Name</label>
+			<input type="text" id="name" name="name" class="validate[required]">
+
+			<label>User ID</label>
+			<input type="text" id="userid" name="userid" class="validate[required]">
+
+			<label>Password</label>
+			<input type="password" id="passwd" name="passwd" id="passwd" class="validate[required] text-input">
+
+			<label>Password confirm</label>
+			<input type="password" name="re_passwd" id="re_passwd" class="validate[required,equals[passwd]] text-input">
+
+			<label>Serial Key</label>
+			<input type="password" id="primarykey" name="primarykey" id="primarykey" class="validate[required,minSize[6],maxSize[6]] text-input" />
+
+
+			<button type="submit" id="login-button">Creat it!</button>
+
+		</form>
+
+	</div>
+	</div>
+
+  </body>
+</html>

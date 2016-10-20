@@ -7,11 +7,18 @@
 <body>
 
 <?php
+
+
 $name=$_POST['name'];
 $userid=$_POST['userid'];
 $pass=$_POST['passwd'];
 $serial=$_POST['primarykey'];
-$status =0;
+$status=0;
+$db['host'] = "localhost";
+$db['user'] = "is07rimo";
+$db['pass'] = "is07rimo";
+$db['dbname'] = "rimo";
+
 
 $name=htmlspecialchars($name);
 $userid=htmlspecialchars($userid);
@@ -32,11 +39,12 @@ if($name==''|| $userid==''|| $pass=='' || !preg_match('/^[0-9a-zA-Z]{2,32}$/', $
 else
 {
 
-  $conn=mysqli_connect('localhost','root','') or exit("MySQLへ接続できません。");
-    mysqli_select_db($conn,'rimo') or exit("データベース名が間違っています。<br>");
+     $conn=mysqli_connect($db['host'], $db['user'], $db['pass']) or exit("MySQLへ接続できません。");
+    mysqli_select_db($conn,'rimo') or exit("データベース名が間違っています。");
 
     $sql="SELECT * FROM $serial where id='{$userid}';";
-    $result=mysqli_query($conn,$sql) or exit("データの抽出に失敗しました。<br>");
+    $result=mysqli_query($conn,$sql) or exit("データの抽出に失敗しました。");
+
 
     if(mysqli_num_rows($result)!=0){
       echo "すでに{$userid}は登録済みです。別のユーザIDを利用し登録してください。<br>";
@@ -52,12 +60,10 @@ else
     mysqli_close($conn);
 
 
-	
-
 }
 
 ?>
 
-<FORM><INPUT type="button" value="　トップへ戻る　" onclick=location.href="../home.html" ></FORM>
+<FORM><INPUT type="button" value="　トップへ戻る　" onclick=location.href="../Top.html" ></FORM>
 </body>
 </html>

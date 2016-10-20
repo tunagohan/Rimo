@@ -1,0 +1,156 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+			<title>Appilance Data</title>
+                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+       		    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                 <link href="font awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+                 <link href="css/style.css" rel="stylesheet" type="text/css">
+                 <link href="css/we.css" rel="stylesheet" type="text/css">
+			    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+				<script src="js/jquery2.2.0.js"></script>
+                 <script src="js/loader.js"></script>
+                 <script src="js/datastyle.js"></script>
+                 <script src="js/datastyle1.js"></script>
+                 <script src="js/app.js"></script>
+                 <script src="js/jquery.simpleWeather.min.js"></script>
+	</head>
+
+<body>
+
+	<center>
+
+		<div class="clearfix main">
+
+			<div class="data" style="background-color:rgba(75,75,75,1)">
+         		<br><br><br>Home Appliance Control
+					<br><br><br><i class="fa fa-rss fa-4x"></i><br />
+						<h1>RiMo</h1>
+    		</div>
+
+			<div class="name">
+              	<br><br><br><br>
+               		<h2><p><span class="year"></span>/<span class="month"></span>/<span class="date"></span>
+						<span class="hour"></span>:<span class="minute"></span>:<span class="second"></span></p></h2>
+                			   To control the house of consumer electronics from the WEB,
+                               <br>it is a site where you can see the usage.
+            </div>
+
+            <div class="data" style="background-color: rgba(55,187,180, 1)">
+            	<p><span class="year"></span>/<span class="month"></span>/<span class="date"></span></p>
+    		</div>
+
+					<!--- リモコンゾーン ここから --->
+			<div class="list">
+            	<br>
+          			<h3>Appliance Control</h3>
+						<br><br><br>
+					<!--- リモコン中身ゾーン ここから--->
+                        <table class="type01">
+
+    						<tr>
+								<th scope="row"><i class="fa fa-clock-o"></i></th>
+        							<th scope="row">TV</th>
+                        				<td>
+                        					<a class="waves-effect waves-light btn-large js-tv-on">ON</a>
+        									<a class="waves-effect waves-light btn-large js-tv-off">OFF</a>
+                        				</td>
+    						</tr>
+
+    						<tr>
+								<th scope="row"><i class="fa fa-clock-o" aria-hidden="true"></i></th>
+					        		<th scope="row">Light</th>
+                            			<td>
+											<a class="waves-effect waves-light btn-large js-light-on">ON</a>
+        									<a class="waves-effect waves-light btn-large js-light-off">OFF</a>
+                            			</td>
+                          	</tr>
+
+                          	<tr>
+								<th scope="row"><i class="fa fa-clock-o" aria-hidden="true"></i></th>
+									<th scope="row">Air Con</th>
+                             			<td>
+                                            <a class="waves-effect waves-light btn-large js-aircon-on">ON</a>
+        									<a class="waves-effect waves-light btn-large js-aircon-off">OFF</a>
+                                 		</td>
+							</tr>
+
+							<tr>
+								<th scope="row"><i class="fa fa-clock-o" aria-hidden="true"></i></th>
+									<th scope="row">PC</th>
+                     			        <td>
+                                            <a class="waves-effect waves-light btn-large js-pc-on">ON</a>
+        									<a class="waves-effect waves-light btn-large js-pc-off">OFF</a>
+                                  		</td>
+							</tr>
+
+							<tr>
+								<th scope="row"><i class="fa fa-clock-o" aria-hidden="true"></i></th>
+									<th scope="row">Audio</th>
+                     			        <td>
+                                            <a class="waves-effect waves-light btn-large js-audio-on">ON</a>
+        									<a class="waves-effect waves-light btn-large js-audio-off">OFF</a>
+                                  		</td>
+                            </tr>
+
+						</table>
+					<!--- リモコン中身ゾーン ここまで --->
+							<br><br>You can turn on and off the <br>appliances in the button.
+			</div>
+					<!--- リモコンゾーン ここまで --->
+             		<div class="area" style="background-color: rgba(220,90,74,1)">
+					</div>
+
+         			<div class="tenki" style="background-color: rgba(68,132,195, 1)" id="weather">
+     				</div>
+
+					<div class="tenki" style="background-color: rgba(121,208,78, 1)">
+			 		</div>
+
+        			<div class="sns">
+               			<i class="fa fa-twitter-square fa-3x"></i>
+               			<i class="fa fa-facebook-square fa-3x"></i>
+                	</div>
+		</div>
+	</center>
+    
+<script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+	<script>
+        var myFirebaseRef = new Firebase("https://rimo-8666d.firebaseio.com/");
+        myFirebaseRef.child("power").on("value", function(snapshot) {
+            if (snapshot.val()) {
+	                  $('.js-light-off').addClass('disabled');
+                		 $('.js-light-on').removeClass('disabled');
+            } else {
+ 					 $('.js-light-on').addClass('disabled');
+                		 $('.js-light-off').removeClass('disabled');
+            }
+        });
+		
+		        myFirebaseRef.child("etc").on("value", function(snapshot) {
+		$('.js-tv-on').addClass('disabled');
+		$('.js-aircon-on').addClass('disabled');
+		$('.js-pc-on').addClass('disabled');
+		$('.js-audio-on').addClass('disabled');
+		$('.js-tv-off').addClass('disabled');
+		$('.js-aircon-off').addClass('disabled');
+		$('.js-pc-off').addClass('disabled');
+		$('.js-audio-off').addClass('disabled');
+        });
+		
+        $('.js-light-on').click(function() {
+            myFirebaseRef.set({
+                power: true
+            });
+        });
+        $('.js-light-off').click(function() {
+            myFirebaseRef.set({
+                power: false
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -3,8 +3,8 @@ $serial=$_POST['serial'];
 session_start();
 
 $db['host'] = "localhost";
-$db['user'] = "root";
-$db['pass'] = "";
+$db['user'] = "is07rimo";
+$db['pass'] = "is07rimo";
 $db['dbname'] = "rimo";
 
 
@@ -48,7 +48,7 @@ if (isset($_POST["login"])) {
       $db_hashed_pwd = $row['pass'];
     }
      
-     $conn=mysqli_connect('localhost','root','') or exit("MySQLへ接続できません。");
+     $conn=mysqli_connect($db['host'], $db['user'], $db['pass']) or exit("MySQLへ接続できません。");
     mysqli_select_db($conn,'rimo') or exit("データベース名が間違っています。");
 
     $sql="SELECT * FROM $serial where id='{$userid}';";
@@ -65,7 +65,7 @@ if (isset($_POST["login"])) {
       session_regenerate_id(true);
       $_SESSION["userid"] = $_POST["userid"];
       $mysqli->close();
-      header("Location:http://localhost/Rimo/sample_home/home.html");
+      header("Location:../Remote/Remote.html");
       exit;
     } 
     else {
@@ -82,5 +82,5 @@ if (isset($_POST["login"])) {
 } 
  
 ?>
-
+<FORM><INPUT type="button" value="　トップへ戻る　" onclick=location.href="../Top.html" ></FORM>
 
