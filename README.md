@@ -135,7 +135,6 @@ irsend: 好きな登録名<br>
 <br>
 リモコン定義の中身を確認 <br>
 `irsend LIST 好きな登録名 ""`<br>
-<br>
 [表示参考]<br>
 irsend: 0000000000000001 play<br>
 irsend: 0000000000000002 stop<br>
