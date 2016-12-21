@@ -1,4 +1,4 @@
-/*------------------------------------------*/
+﻿/*------------------------------------------*/
 /* vietnamese */
 @font-face {
   font-family: 'Source Sans Pro';
@@ -94,7 +94,7 @@ body :-ms-input-placeholder {
   top: 0;
   left: 0;
   width: 100%;
-  height: 622px;
+  height: 100%;
   overflow: hidden;
 }
 .wrapper.form-success .container h1 {
@@ -116,19 +116,14 @@ body :-ms-input-placeholder {
           transition-timing-function: ease-in-put;
   font-weight: 200;
 }
-form {
-  padding: 20px 0;
-  position: relative;
-  z-index: 2;
-}
-form input {
+input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   outline: 0;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.2);
-  width: 250px;
+  width: 300px;
   border-radius: 3px;
   padding: 10px 15px;
   margin: 0 auto 10px auto;
@@ -140,15 +135,15 @@ form input {
           transition-duration: 0.25s;
   font-weight: 300;
 }
-form input:hover {
+input:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
-form input:focus {
+input:focus {
   background-color: white;
   width: 300px;
   color: #53e3a6;
 }
-form button {
+button {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -158,12 +153,12 @@ form button {
   padding: 10px 15px;
   color: #53e3a6;
   border-radius: 3px;
-  width: 250px;
+  width: 130px;
   cursor: pointer;
   font-size: 18px;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
 }
-form button:hover {
+button:hover {
   background-color: #f5f7f9;
 }

@@ -1,0 +1,192 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+			<title>Appilance Data</title>
+                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+       		    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+                 <link href="font awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+                 <link href="css/style.css" rel="stylesheet" type="text/css">
+                 <link href="css/we.css" rel="stylesheet" type="text/css">
+
+			    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+				<script src="js/jquery2.2.0.js"></script>
+                 <script src="js/loader.js"></script>
+                 <script src="js/datastyle.js"></script>
+                 <script src="js/app.js"></script>
+                 <script src="js/jquery.simpleWeather.min.js"></script>
+                 <script src="js/watch.js"></script>
+	</head>
+<body>
+		<div class="clearfix main">
+    			<div class="data" style="background-color:rgba(75,75,75,1)">
+         		<br><br><br>Home Appliance Control
+					 <br><br><br><i class="fa fa-rss fa-4x"></i><br />
+						<h1>RiMo</h1>
+    			</div>
+             <div class="name">
+              	<br><br><br><br>
+               		<h2><p><span class="year"></span>/<span class="month"></span>/<span class="date"></span>
+						<span class="hour"></span>:<span class="minute"></span>:<span class="second"></span></p></h2>
+                			   To control the house of consumer electronics from the WEB,
+                               <br>it is a site where you can see the usage.
+            </div>
+            		<div class="data" style="background-color: rgba(155,68,117, 1)">
+            			<p><span class="year"></span>/<span class="month"></span>/<span class="date"></span></p><br><br>
+                   <table class="t2">
+                   <tr>
+                   <th class="t1">TV</th>
+                   <th class="t2"><progress id="prog" max="60" value="0"></progress><br></th></tr>
+                   <th class="t1">Light</th>
+                   <th class="t2"><progress id="prog1" max="60" value="0"></progress><br></th></tr>
+                   <th class="t1">Air Con</th>
+                   <th class="t2"><progress id="prog2" max="60" value="0"></progress><br></th></tr>
+                   <th class="t1">PC</th>
+                   <th class="t2"><progress id="prog3" max="60" value="0"></progress><br></th></tr>
+                   <th class="t1">Audio</th>
+                   <th class="t2"><progress id="prog4" max="60" value="0"></progress><br></th></tr>
+                   </table>
+										<p id="timer"style="display:none"></p>
+    			</div>
+          	<div class="list">
+            		<br>
+          				<h3>Appliance Control</h3><br><br><br>
+                        		<table>
+    								<tr>
+									<th scope="row"><i class="fa fa-clock-o"></i></th>
+        									<th scope="row">TV</th>
+                        						<td>
+                        							<a class="waves-effect waves-light btn-large js-tv-on">ON</a>
+        											  <a class="waves-effect waves-light btn-large js-tv-off">OFF</a>
+                        						</td>
+    								</tr>
+    								<tr>
+									<th scope="row"><i class="fa fa-clock-o" aria-hidden="true"></i></th>
+					        				<th scope="row">Light</th>
+                            					<td>
+                                                	<a class="waves-effect waves-light btn-large js-light-on" >ON</a>
+        											  <a class="waves-effect waves-light btn-large js-light-off">OFF</a>
+                            					</td>
+                          		</tr>
+                          		<tr>
+									<th scope="row"><i class="fa fa-clock-o" aria-hidden="true"></i></th>
+										 <th scope="row">Air Con</th>
+                             					<td>
+                                                	<a class="waves-effect waves-light btn-large js-aircon-on">ON</a>
+        											  <a class="waves-effect waves-light btn-large js-aircon-off">OFF</a>
+                                 				 </td>
+                             		</tr>
+                             		<tr>
+									 <th scope="row"><i class="fa fa-clock-o" aria-hidden="true"></i></th>
+										 <th scope="row">PC</th>
+                     			        		<td>
+                                                	<a class="waves-effect waves-light btn-large js-pc-on">ON</a>
+        											  <a class="waves-effect waves-light btn-large js-pc-off">OFF</a>
+                                  			</td>
+                             		</tr>
+                             		<tr>
+									 <th scope="row"><i class="fa fa-clock-o" aria-hidden="true"></i></th>
+										 <th scope="row">Audio</th>
+                     			        		<td>
+                                                	<a class="waves-effect waves-light btn-large js-audio-on">ON</a>
+        											  <a class="waves-effect waves-light btn-large js-audio-off">OFF</a>
+                                  			</td>
+                            		 </tr>
+                             </table>
+                             		<br><br>You can turn on and off the <br>appliances in the button.
+				</div>
+             		<div class="git">
+                    		<a href="https://github.com/"><img src="http://yahoo.jp/box/So-tcg" class="github"></a>
+                    		<br>
+                       Source cord of RiMo  is being exhibited in Github.<br>
+                       The person who would like to see clicks a picture.
+            			 </div>
+         			<div class="tenki"  id="weather">
+     				</div>
+					<div class="acount">
+                  		<img src="http://yahoo.jp/box/f76Vn5" class="line">
+                        <br><h3>RiMo 公式　<br>LINEアカウント</h3>
+                        <br>
+                        <br>
+                        <img src="http://yahoo.jp/box/CbK3nT" class="qr">
+			 		</div>
+        				<div class="sns">
+               		<a href="https://twitter.com/?lang=ja" target="_blank"><i class="fa fa-twitter-square fa-3x"></i>
+               		<a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square fa-3x"></i>
+                		</div>
+			</div>    
+     <script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+
+<script>
+        var myFirebaseRef = new Firebase("https://rimo-8666d.firebaseio.com/");
+		var myS = 0 ;
+		var timeID;
+		var timeNum = 0;
+		myFirebaseRef.child("etc").on("value", function(snapshot) {
+				$('.js-tv-on').addClass('disabled');
+				$('.js-aircon-on').addClass('disabled');
+				$('.js-pc-on').addClass('disabled');
+				$('.js-audio-on').addClass('disabled');
+				$('.js-tv-off').addClass('disabled');
+				$('.js-aircon-off').addClass('disabled');
+				$('.js-pc-off').addClass('disabled');
+				$('.js-audio-off').addClass('disabled');
+	        });
+
+        myFirebaseRef.child("power").on("value", function(snapshot) {
+            if (snapshot.val()) {
+	           		$('.js-light-off').addClass('disabled');
+                	$('.js-light-on').removeClass('disabled');
+					timerID = setInterval("countUp()",10); // 0.01秒毎に呼び出し
+            } else {
+ 					$('.js-light-on').addClass('disabled');
+                	$('.js-light-off').removeClass('disabled');
+					clearInterval(timerID);
+            }
+        });
+		
+        $('.js-light-on').click(function() {
+            myFirebaseRef.set({
+                power: true
+            });
+        });
+        $('.js-light-off').click(function() {
+            myFirebaseRef.set({
+                power: false
+            });
+        });
+		function countUp(){
+			timeNum++;
+			document.getElementById("timer").innerHTML = count_format(timeNum);
+		};
+
+		function count_format(num) {
+			var ts = num / 100;
+			var tm = Math.floor(ts / 60);
+			ts = (ts % 60).toFixed(2);
+			var th = Math.floor(tm / 60);
+			tm = tm % 60;
+			myS = ts;
+			if (ts < 10) ts = "0" + ts;
+			if (tm < 10) tm = "0" + tm;
+			if (th < 10) th = "0" + th;
+		    return th + ":" + tm + ":" + ts;
+			tm = time;
+		};
+
+  var pbar = document.getElementById('prog1');
+  
+  var pup = setInterval("upPrgrss()",100);
+  function upPrgrss(){
+    if(pbar.value <= pbar.max){
+    pbar.value = myS;
+    
+    }else{
+    clearInterval(pup);
+    }
+}
+</script>
+
+
+</body>
+</html>
