@@ -1,7 +1,7 @@
 var Firebase = require('firebase');
 
 Firebase.initializeApp({
-  databaseURL: "https://rimo-9657d.firebaseio.com"
+  databaseURL: "https://rimo-8666d.firebaseio.com"
 });
 
 var db = Firebase.database();
