@@ -156,10 +156,14 @@ LIRCサービスを再起動する
 [表示参考]
 irsend: 好きな登録名
 
-リモコン定義の中身を確認
+リモコン定義の中身を確認 
 `irsend LIST 好きな登録名 ""`
+
 [表示参考]
-irsend: 0000000000000001 play irsend: 0000000000000002 stop irsend: 0000000000000003 pause irsend: 0000000000000004 eject
+irsend: 0000000000000001 play
+irsend: 0000000000000002 stop
+irsend: 0000000000000003 pause
+irsend: 0000000000000004 eject
 
 リモコンの内容を送信する
 `irsend SEND_ONCE 好きな登録名 play`
