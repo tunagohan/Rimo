@@ -96,12 +96,14 @@ OSダウンロード先：[Raspbian OS](https://www.raspberrypi.org/downloads/ra
 以下のコマンドを入力し４箇所書き換える<br>
 `sudo vi /etc/lirc/hardware.conf`<br>
 <br>
+
 |変更前|変更後|
 |:--|:--|
 |LIRC_ARGS=""|LIRC_ARGS="--uinput"|
 |DRIVER="UNCONFIGURED"|DRIVER="default"|
 |DEVICE=""|DEVICE="/dev/lirc0"|
 |MODULES=""|MODULES="lirc_rpi"|
+
 <br>
 その後<br>
 `sudo vi /boot/config.txt`<br>
@@ -141,9 +143,11 @@ space 451<br>
 登録名.confのNAMEを変更する<br>
 `sudo vi 登録名.conf`<br>
 <br>
+
 |変更前|変更後|
 |:--|:--|
 |name  /home/pi/登録名.conf|name  好きな登録名|
+
 <br>
 リモコンの定義ファイルをコピーする<br>
 `sudo op 登録名.conf /etc/lirc/lircd.conf`<br>
