@@ -1,30 +1,3 @@
-
-# 見出し1
-## 見出し2
-### 見出し3
-#### 見出し4
-##### 見出し5
-###### 見出し6
-インストールコマンドは `gem install hoge` です
-太字に **太字** します
-
-***
-___
-
-[Google先生](https://www.google.co.jp/)
-
-1. 番号付きリスト1
-    1. 番号付きリスト1_1
-    1. 番号付きリスト1_2
-1. 番号付きリスト2
-1. 番号付きリスト3
-
-> 横線を入れます
->
-> これで入ります
-
-___
-
 # <font color="Lime">R</font>imo
 #### <font color="SteelBlue">H</font>ome <font color="Salmon">A</font>pplication <font color="DarkOrange">C</font>ontrol
 ![Rimo](http://yahoo.jp/box/kwvUxZ)
