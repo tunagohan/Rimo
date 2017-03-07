@@ -1,10 +1,10 @@
 ﻿//Firebase初期設定
 var config = {
-    apiKey: "AIzaSyDwk4syHlJQWrryb-WXU8FW7RB7JXufmtE",
-    authDomain: "rimo-8666d.firebaseapp.com",
-    databaseURL: "https://rimo-8666d.firebaseio.com/",
-    storageBucket: "rimo-8666d.appspot.com",
-    messagingSenderId: "273572213277"
+    apiKey: "APIキー",
+    authDomain: "ドメイン名",
+    databaseURL: "URL",
+    storageBucket: "BucketURL",
+    messagingSenderId: "messaginID"
 };
 firebase.initializeApp(config);
 

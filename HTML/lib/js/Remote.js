@@ -1,5 +1,5 @@
 	//Declaration
-    var myFirebaseRef = new Firebase("https://rimo-8666d.firebaseio.com/IR");
+    var myFirebaseRef = new Firebase("[firebaseURL]");
 	var cs;
 	var ps;
 	var powerstate;
