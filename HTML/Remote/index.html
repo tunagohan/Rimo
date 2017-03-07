@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rimo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<style>
+		.u-mb20 {
+			margin-bottom: 20px;
+		}
+		.gbl-nav {
+			background-color: #444444;
+		}
+		.sub-title {
+			font-size: 20px;
+			border-bottom: 1px solid #ccc;
+		}
+		</style>
+	</head>
+
+	<body oncontextmenu='return false'>
+
+  <nav class="gbl-nav u-mb20">
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo center">Rimo</a>
+
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="#">ライト</a>
+          </li>
+          <li>
+            <a href="#">エアコン</a>
+          </li>
+         <li>
+            <a href="#">テレビ</a>
+          </li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse">
+          <i class="mdi-navigation-menu"></i>
+        </a>
+		</div>
+	</nav>
+
+
+    <div class="container">
+		<button id="logout">Logout</button>
+		<div class="sub-title u-mb20">ライトの設定</div>
+		<div class="u-mb20">
+			<h6><i class="fa fa-power-off"></i>現在の【ライト】の状態は</h6>
+			<span class="js-power-state-output">
+				<div class="progress">
+					<div class="indeterminate"></div>
+				</div>
+			</span>
+		</div>
+
+		<div class="row u-mb20">
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-light-on">電源ON</a>
+        	</div>
+
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-light-off">電源OFF</a>
+	        </div>
+
+			<br>
+			<br>
+			<br>
+
+	        <h6><i class="fa fa-power-off"></i>現在の【ライトの色】の状態は</h6>
+
+			<span class="js-color-state-output">
+				<div class="progress">
+					<div class="indeterminate"></div>
+				</div>
+			</span>
+
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-Red-on">赤</a>
+			</div>
+
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-Green-on">緑</a>
+			</div>
+
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-Blue-on">青</a>
+			</div>
+
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-Orange-on">黄</a>
+			</div>
+
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-White-on">白</a>
+			</div>
+
+		</div>
+	</div>
+
+  <script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../lib/js/Remote.js"></script>
+	<script type="text/javascript" src="../lib/js/Singkeep.js"></script>
+	<script type="text/javascript" src="lib/js/keys.js"></script>
+	</body>
+</html>

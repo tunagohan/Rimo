@@ -2,99 +2,146 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    	<title>Rimo</title>
+  <title>Rimo</title>
 	<meta charset="UTF-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="author" content="Alvaro Trigo Lopez" />
 	<meta name="description" content="fullPage plugin by Alvaro Trigo. Pure javascript version of full screen slider." />
 	<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple,pure,javascript,slider,hijacking" />
 	<meta name="Resource-type" content="Document" />
-    	<meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">	</script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="lib/css/Top_style.css" />
-
 </head>
-<body>
 
-<div id="header">
+<body oncontextmenu='return false'>
 
-<button class="button" id="login-button" name="login" type="submit" onclick="location.href='Sign/index.html'">Sign in</button>
+	<div id="header">
 
-</div>
+		<div id="modal-content">
+			<button class="button" id="login-button" name="login" type="submit">Sign in</button>
+		</div>
 
+	</div>
 
 
 
 
 <div id="fullpage">
-	//section0 zone --->
+
 	<div class="section " id="section0">
 		<div class="content">
 			<h1>Rimo</h1>
 			<p1> Home Application Control</p1><br>
-			<p>家電製品をスマホで操作する時代へ</p>
+			<p>家電をスマホで操作する時代へ</p>
 			</br></br>
 		</div>
 	</div>
 
 	<div class="section" id="section1">
+
 		<div class="slide" id="slide1">
 			<div class="content">
 				<p>場所問わず</p>
-				<p>
-				家電の状況を把握
-				</p>
-				<p>
-		      		外出先からでも操作
-				</p>
+				<p>家電の状況を把握</p>
+				<p>外出先からでも操作</p>
 			</div>
 		</div>
 
-		
-		<div class="slide" id="slide2">
-			<div class="content">
-				<h1>安心</h1>
-				<p>Google認証を採用</p>
-			</div>
-		</div>
 		<div class="slide" id="slide2">
 			<div class="content">
 				<p>Firebase</p>
-				<p>
-				MBaasを利用した
-				</p>
-				<p>
-				高速通信
-				</p>
+				<p>今話題の</p>
+				<p>MBaasを利用した</p>
+				<p>高速同期</p>
 			</div>
 		</div>
 		
 	</div>
 
+
 	<div class="section" id="section2">
+
+		<div class="slide" id="slide1">
+			<div class="content">
+				<p>ソースコード公開</p>
+				<p>導入手順も分かりすく</p>
+				<img src="http://yahoo.jp/box/MoZCxA">
+			</div>
+		</div>
+
+		<div class="slide" id="slide2">
+			<div class="content">
+				<h2>実装予定</h2>
+				<p>タイマー機能</p>
+				<p>電気使用時間表示</p>
+				<p>スマホからリモコン登録</p>
+			</div>
+		</div>
+		
+	</div>
+
+
+
+
+	<div class="section" id="section3">
 		<div class="content">
+
 			<h1>Rimo</h1><br>
 			<p1> Home Application Control</p1><br>
 			<p2>さあはじめよう</p2><br>
 			<br><br><br>
-			<button class="button" id="login-button" name="login" type="submit" onclick="location.href='Sign/index.html'">Sign in</button>
+			<div id="rect">
+				<div id="modal-content">
+					<button class="button" id="login-button2" name="login" type="submit">Sign in</button>
+				</div>
+			</div>
 
 		</div>
 	</div>
-
 </div>
 
+	<div id="modal-main">
+		<h5>LOGIN</h5>
+		<p id="info"></p>
+		<HR width="330" align="center">
+    <div id="input-area">
+			<ul>
+	    	<li1><input id="email" type="email" placeholder="EMail" required/></li1>
+	      <li2><input id="password" type="password" placeholder="Password" required/></li2>
+			</ul>
+	   	<button id="login">Login</button>
+	   	<button id="newuser">Register</button>
+    </div>
+		<button id="logout" class="hide">Logout</button>
+	</div>
+
 <script type="text/javascript" src="lib/js/Top_fullPage.js"></script>
+<script type="text/javascript" src="lib/js/keys.js"></script>
 <script type="text/javascript">
 	fullpage.initialize('#fullpage', {
 		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
 		menu: '#menu',
 		css3:true
 	});
+$(function () {
+    setTimeout('rect()'); //アニメーションを実行
+});
 
+function rect() {
+    $('#rect').animate({
+        marginTop: '-=10px'
+    }, 800).animate({
+        marginTop: '+=10px'
+    }, 800);
+    setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
+}
 </script>
 
+
+<script type="text/javascript" src="lib/js/Modal.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+<script src="lib/js/Sing.js"></script>
 </body>
 </html>

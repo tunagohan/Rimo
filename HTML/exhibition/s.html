@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rimo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<style>
+		.u-mb20 {
+			margin-bottom: 40px;
+		}
+		.gbl-nav {
+			background-color: #444444;
+		}
+		.sub-title {
+			font-size: 40px;
+			border-bottom: 1px solid #ccc;
+		}
+		.box{
+			width: 100px;
+			float: left;
+		}
+		.box1{
+			width: 100px;
+			float: left;
+			}
+		.text{
+			font-size: 10px;
+			}
+		.progress{
+			width: 400px;
+			}
+		</style>
+	</head>
+
+	<body oncontextmenu='return false'>
+  
+    <div class="container">
+		<div class="sub-title u-mb20">Setting of Light</div>
+		<div class="u-mb20">
+			<h6><i class="fa fa-power-off"></i>  Current status</h6>
+			<span class="js-power-state-output">
+				<div class="progress">
+					<div class="indeterminate"></div>
+				</div>
+			</span>
+		</div>
+		<div class="u-mb20">
+		<div class="box">
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-light-on">ON</a>
+        	</div></div>
+        	<div class="box">
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-light-off">OFF</a>
+	        </div></div>
+
+			<br>
+			<br>
+			<br>
+
+	         <h6><i class="fa fa-power-off"></i>  Color selection</h6>
+
+			<span class="js-color-state-output">
+				<div class="progress">
+					<div class="indeterminate"></div>
+				</div>
+			</span>
+			<div class="box">
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-Red-on red">赤</a>
+			</div></div>
+			<div class="box">
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-Green-on light-green">緑</a>
+			</div></div>
+			<div class="box">
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-Blue-on light-blue">青</a>
+				</div></div>
+			<div class="box1">
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-Orange-on yellow">黄</a>
+			</div></div>
+			<div class="box1">
+			<div class="col s6">
+				<a class="waves-effect waves-light btn-large js-White-on grey">白</a>
+			</div></div>
+
+		</div>
+	</div>
+  <script src="https://cdn.firebase.com/js/client/2.1.1/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../lib/js/Remote.js"></script>
+	<script type="text/javascript" src="../lib/js/Singkeep.js"></script>
+	<script type="text/javascript" src="lib/js/keys.js"></script>
+	</body>
+</html>

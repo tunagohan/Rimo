@@ -2,7 +2,7 @@
 var config = {
     apiKey: "AIzaSyDwk4syHlJQWrryb-WXU8FW7RB7JXufmtE",
     authDomain: "rimo-8666d.firebaseapp.com",
-    databaseURL: "https://rimo-8666d.firebaseio.com",
+    databaseURL: "https://rimo-8666d.firebaseio.com/",
     storageBucket: "rimo-8666d.appspot.com",
     messagingSenderId: "273572213277"
 };

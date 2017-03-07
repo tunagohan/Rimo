@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="lib/css/style.css" type="text/css" rel="stylesheet">
+<link href="lib/css/tabs.css" type="text/css" rel="stylesheet">
+<link href="lib/font-awesome-4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+<div class="container">
+<div class="tbinfo">
+<div class="sns">
+<i class="fa fa-facebook-square"></i>&nbsp;
+<i class="fa fa-twitter-square"></i></div>
+</div>
+<!-- tabs -->
+<div class="thetabs">
+<input checked id="one" name="thetabs" type="radio">
+<label for="one"><i class="fa fa-globe fa-lg"></i> RiMo</label>
+<input id="two" name="thetabs" type="radio" value="Two">
+<label for="two"><i class="fa fa-file-text fa-lg"></i> Use</label>
+<input id="three" name="thetabs" type="radio">
+<label for="three"><i class="fa fa-rss fa-lg"></i> Control</label>
+<input id="four" name="thetabs" type="radio">
+<label for="four"><i class="fa fa-github fa-lg"></i> Github</label>
+
+<div class="panels">
+
+<!-- page 1 --> 
+<div class="panel">
+<div class="heading">
+<h1>RiMo</h1>
+<br>-- Home Applieance Control --
+</div>
+<div class="read">
+<br>
+<img class="img" src="http://yahoo.jp/box/tvYHJk">
+<br>
+<div class="line">
+<img class="qr" src="http://yahoo.jp/box/l2gsWQ">
+<br>RiMO LINE<br>Official account
+</div>
+</div>    
+</div>
+
+<!-- page 2 -->
+<div class="panel">
+<div class="heading">
+<h2>How to use</h2>
+</div>
+<div class="row">
+<iframe src="use.html" width="100%" height="400px"  frameborder="0"> </iframe>
+</div>
+</div>
+
+<!--page 3 -->
+<div class="panel">
+<div class="row">
+<iframe src="s.html" width="100%" height="400px"  frameborder="0"> </iframe>
+</div>
+
+</div>
+
+<!--page 4 -->
+<div class="panel">
+<div class="heading">
+<p><h2>Github</h2> - Source cord of RiMo -</p>
+</div>
+<div class="row">
+<div class="text4">
+<iframe src="https://github.co.jp" width="100%" height="400px"  frameborder="0"> </iframe>
+</div>
+</div>
+</div>    
+</div>
+</div>
+</div>
+</div>
+<!-- progresbar jacascript -->
+	<script type="text/javascript">
+	sw_status = 0; // startとstopのフラグ
+	resetTime();
+
+	function resetTime(){
+		if (sw_status == 1) {startCount();}
+	    timeNum = 0; // 時間の初期値
+		document.getElementById("timer").innerHTML = count_format(0);
+	}
+	function startCount(){
+		if (sw_status == 0) {
+			document.form_sw.bstart.value = "Stop";
+			sw_status = 1;
+			timerID = setInterval("countUp()", 10); // 0.01秒毎に呼び出し
+		} else {
+			document.form_sw.bstart.value = "Start";
+			sw_status = 0;
+			clearInterval(timerID); // 呼び出しの停止
+		}
+	}
+	function countUp(){
+	    timeNum++;
+	    document.getElementById("timer").innerHTML = count_format(timeNum);
+	}
+
+	function count_format(num) {
+	     ts = num / 100;
+		var tm = Math.floor(ts / 60);
+		 ts = (ts % 60).toFixed(0);
+		var th = Math.floor(tm / 60);
+		tm = tm % 60;
+		if (ts < 10) ts = "0" + ts;
+		if (tm < 10) tm = "0" + tm;
+		if (th < 10) th = "0" + th;
+		return ts;
+	}
+    </script>
+
+    <script>
+        
+  var pbar = document.getElementById('prog');
+  var ptxt = document.getElementById('outp');
+  var pup = setInterval("upPrgrss()", 1);
+  function upPrgrss() {
+      
+    if (pbar.value <= pbar.max) {
+        pbar.value = ts;       /*「++」で 1 ずつ足してます*/
+        ptxt.value = pbar.value;
+        
+    }else{
+    clearInterval(pup);
+    }
+}
+    </script>	
+</body>
+</html>
+

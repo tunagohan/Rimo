@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* CSS Document */
+
 		/* Reset CSS
 		 * --------------------------------------- */
 		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
@@ -51,10 +54,7 @@
 			color: #F2F2F2;
 		}
 		h1{
-			font-size: 6em;
-		}
-		h2{
-			font-size: 5em;
+			font-size: 4em;
 		}
 		p{
 			font-size: 2em;
@@ -68,7 +68,19 @@
 		}
 		.content{
 			position: relative;
-			top: 50%;
+			top: 45%;
+			transform: translateY(-50%);
+			text-align: center;
+		}
+		.content h1{
+			font-size: 4em;
+		}
+		.content p{
+			font-size: 20px;
+		}
+		.content1{
+			position: relative;
+			top: 30%;
 			transform: translateY(-50%);
 			text-align: center;
 		}
@@ -76,7 +88,7 @@
 		/* Section 1
 		 * --------------------------------------- */
 		#section0{
-			background-color: #BFDA00;
+			background-color: rgba(252,225,0,1.0);
 		}
 		#section0 h1{
 			color: #444;
@@ -94,10 +106,11 @@
 		/* Section 2
 		 * --------------------------------------- */
 		#section1{
-			background-color: #2EBE21;
+			background-color: rgba(255,31,111,1.0);
 		}
 		#section1 h1{
-			color: #fff;
+			color: rgba(108,108,108,0.7);
+			font-size: 50px;
 		}
 		#section1 p{
 			opacity: 0.8;
@@ -107,23 +120,12 @@
 		/* Section 3
 		 * --------------------------------------- */
 		#section2{
-			background-color: #2C3E50;
+			background-color: rgba(84,137,200,1.0);
 		}
-		#section2 h2{
+		#section2 h1{
 			color: #F2F2F2;
 		}
 		#section2 p{
-			opacity: 0.6;
-		}
-		/* Section 4
-		 * --------------------------------------- */
-		#section3{
-			background-color: #49D4BF;
-		}
-		#section3 h1{
-			color: #F2F2F2;
-		}
-		#section3 p{
 			opacity: 0.6;
 		}
 	       /* Header
@@ -360,126 +362,4 @@ html.fp-enabled,
 #fp-nav ul li .fp-tooltip.left {
     left: 20px;
 }
-#modal-main {
-  display: none;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-  width: 360px;
-  height: 250px;
-  margin: 0;
-  text-align: center;
-  padding:20px 20px 10px 20px;
-  background-color: #ffffff;
-  color: #666666;
-  position:fixed;
-  z-index: 999;
-}
-/* ÉÇÅ[É_Éã îwåiÉGÉäÉA */
-#modal-bg {
-  display:none;
-  width:100%;
-  height:100%;
-  position:fixed;
-  top:0;
-  left:0;
-  z-index: 1;
-}
 
-input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: 0;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid #ccc;
-  width: 300px;
-  border-radius: 3px;
-  padding: 10px 15px;
-  margin: 0 auto 10px auto;
-  display: block;
-  text-align: center;
-  font-size: 18px;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
-  font-weight: 300;
-}
-input:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-input:focus {
-  background-color: white;
-  width: 300px;
-  color: #53e3a6;
-}
-.hide {
-	display: none;
-}
-#info {
-	text-align: center;
-	font-size: 2em;
-	font-weight: bold;
-}
-h5{
-	color: #333;
-	font-size: 20px;
-	padding: 10px 10px 0px 15px;
-	font-weight: 400;
-	text-shadow: 0 1px 0 rgba(255,255,255,.5);
-	text-align: left;
-}
-
-#login {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: 0;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px 15px;
-  color: #53e3a6;
-  border-radius: 3px;
-  width: 160px;
-  cursor: pointer;
-  font-size: 18px;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
-  margin: 0 5px 0 0;
-}
-#login:hover {
-  background-color: #f5f7f9;
-}
-
-#newuser {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: 0;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px 15px;
-  color: #53e3a6;
-  border-radius: 3px;
-  width: 160px;
-  cursor: pointer;
-  font-size: 18px;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
-  margin: 0 0 5px 0;
-}
-#newuser:hover {
-  background-color: #f5f7f9;
-}
-ul {
-  list-style-type: none;
-}
-li1 {
-  background: url(http://www.fastpic.jp/images.php?file=5879863281.png) no-repeat 20px 10px;
-  display: list-item;
-  text-align: -webkit-match-parent;
-}
-li2 {
-  background: url(http://www.fastpic.jp/images.php?file=8765130694.png) no-repeat 22px 10px;
-  display: list-item;
-  text-align: -webkit-match-parent;
-}
