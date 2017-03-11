@@ -5,12 +5,11 @@
 ___
 お使いのスマートフォンで
 
-http://urx.red/Cd3R
+(http://yahoo.jp/box/rHp93u)
 
 へアクセス
 
 ID:is07rimo@it.com
-
 
 PASS:is07rimo
 
