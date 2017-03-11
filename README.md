@@ -5,7 +5,7 @@
 ___
 お使いのスマートフォンで
 
-[Link](http://yahoo.jp/box/rHp93u)
+![Link](http://yahoo.jp/box/rHp93u)
 
 へアクセス
 
