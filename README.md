@@ -14,9 +14,9 @@ ___
 
 右上の「Sing in」をタップしてログインをすると操作ページへ移動します
 
-ID: rimo
+ID: rimo@it.com
 
-PASS: rimo
+PASS: rimotest
 
 
 # <font color="Tomato">概</font>要<br>
