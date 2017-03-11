@@ -3,17 +3,18 @@
 ![Rimo](http://yahoo.jp/box/kwvUxZ)
 
 ___
+
+### お使いのスマートフォンからこちらのランプを操作してみよう
+
 お使いのスマートフォンで
 
 ![Link](http://yahoo.jp/box/rHp93u)
 
 へアクセス
 
-ID: is07rimo@it.com
+ID: rimo
 
-PASS: is07rimo
-
-お使いのスマートフォンからこちらのランプを操作してみよう
+PASS: rimo
 
 
 # <font color="Tomato">概</font>要<br>
